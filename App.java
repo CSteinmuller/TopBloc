@@ -26,6 +26,12 @@ public class App
 	    sendRequest(json);
 
     }
+	
+     /**
+     * sends the JSON request to the server
+     * @param data - data to be sent
+     * @throws IOException
+     */
     public static void sendRequest(String data) throws IOException
     {
     	CloseableHttpClient client = HttpClients.createDefault();
