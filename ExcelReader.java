@@ -104,10 +104,10 @@ public class ExcelReader
 	}
 	
 	/**
-	 * 
-	 * @return the data in json format
+	 * converts the data to a JSON object
+	 * @return the data in JSON format
 	 */
-	public String MakeJSON()
+	public String makeJSON()
 	{
 		String id =  "\"id\":\"clstein1@outlook.com\",";
 		String numberSetOne = "\"numberSetOne\": ["+numbers1[0]+", "+numbers1[1]+", "+numbers1[2]+", "+numbers1[3]+"],";
