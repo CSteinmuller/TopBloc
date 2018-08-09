@@ -14,6 +14,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelReader 
 {
+	/**
+	*Default Constructor
+	*/
 	public ExcelReader()
 	{
 		this.numbers1 = new double[4];
@@ -21,6 +24,12 @@ public class ExcelReader
 		this.words = new String[4];
 	}
 	
+	/**
+	 * Constructor with data already known
+	 * @param column1: first column of numbers
+	 * @param column2:  second column of numbers
+	 * @param wordColumn: column of words
+	 */
 	public ExcelReader(double[] column1, double[] column2, String wordColumn[] )
 	{
 		this.numbers1 = column1;
@@ -29,7 +38,7 @@ public class ExcelReader
 	}
 
 	/**
-	 * 
+	 * reads an Excel file into the object
 	 * @param file: Excel file to be real
 	 */
 	public void readXcell(String file)
@@ -82,7 +91,7 @@ public class ExcelReader
 	}
 	
 	/**
-	 * 
+	 * Performs the operations requested (multiplying the first colum, dividing the second, concateing the third
 	 * @param other the data to be merged
 	 * @return the merged set of data
 	 */
