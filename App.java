@@ -13,19 +13,19 @@ import org.apache.http.impl.client.HttpClients;
 
 public class App
 {
-
     public static void main(String[] args) throws IOException
     {
     	ExcelReader dataone = new ExcelReader();
     	ExcelReader datatwo = new ExcelReader();
+        
     	dataone.readXcell("../../Downloads/Data1.xlsx");
     	datatwo.readXcell("../../Downloads/Data2.xlsx");
+        
     	ExcelReader datathree = dataone.merge(datatwo);
     	String json = datathree.MakeJSON();
     	CloseableHttpClient client = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost("http://34.239.125.159:5000/challenge");
         StringEntity post = new StringEntity(json);
-        System.out.println(json);
         httpPost.setEntity(post);
         httpPost.setHeader("Accept", "application/json");
         httpPost.setHeader("Content-type", "application/json");
