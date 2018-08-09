@@ -22,7 +22,7 @@ public class App
 	    datatwo.readXcell("../../Downloads/Data2.xlsx");
 	    
 	    ExcelReader datathree = dataone.merge(datatwo);
-	    String json = datathree.MakeJSON();
+	    String json = datathree.makeJSON();
 	    sendRequest(json);
 
     }
